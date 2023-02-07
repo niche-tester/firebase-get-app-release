@@ -1,0 +1,26 @@
+{
+  "name": "firebase-get-app-release",
+  "version": "1.0.0",
+  "description": "Github action to retrieves the latest app release from Firebase Distribution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niche-tester/firebase-get-app-release.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niche-tester/firebase-get-app-release/issues"
+  },
+  "homepage": "https://github.com/niche-tester/firebase-get-app-release#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "googleapis": "^92.0.0",
+    "request": "^2.88.2"
+  }
+}
