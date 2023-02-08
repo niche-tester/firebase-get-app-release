@@ -65,5 +65,6 @@ function getLatestReleaseName(body) {
   const json = JSON.parse(body);
   const releaseName = json['releases'][0]['name'];
   console.log(`Current version: ${releaseName}`);
+  core.info("release name" + releaseName)
   core.setOutput('releaseName', releaseName);
 }

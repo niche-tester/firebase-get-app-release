@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Get firebase release
         id: name
-        uses: niche-tester/firebase-get-app-release@v1.1.2
+        uses: niche-tester/firebase-get-app-release@v1.1.3
         with:
           appId: ${{secrets.FIREBASE_APP_ID}}
           projectNumber: ${{secrets.FIREBASE_PROJECT_NUMBER}}
