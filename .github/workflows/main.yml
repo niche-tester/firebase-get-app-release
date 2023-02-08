@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to test actions
+    steps:
+      - name: Get firebase release
+        id: name
+        uses: niche-tester/firebase-get-app-release@v1.0
+        with:
+          appId: ${{secrets.FIREBASE_APP_ID}}
+          projectNumber: ${{secrets.FIREBASE_PROJECT_NUMBER}}
+          serviceAccount: ${{secrets.FIREBASE_SERVICE_ACCOUNT}}      # Use the output from the `hello` step
+      - name: Get the output app
+        run: echo "The app ${{ steps.name.outputs.releaseName }}"

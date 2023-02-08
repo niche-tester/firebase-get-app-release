@@ -1,0 +1,37 @@
+{
+  "name": "firebase-get-app-release",
+  "version": "1.0.0",
+  "description": "Github action to retrieves the latest app release from Firebase Distribution",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run lint && npm run prepare && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niche-tester/firebase-get-app-release.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "Firebase"
+  ],
+  "author": "Denisha Surjoodeen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niche-tester/firebase-get-app-release/issues"
+  },
+  "homepage": "https://github.com/niche-tester/firebase-get-app-release#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1",
+    "eslint": "^8.0.0",
+    "jest": "^27.2.5",
+    "googleapis": "^92.0.0",
+    "request": "^2.88.2"
+  }
+}

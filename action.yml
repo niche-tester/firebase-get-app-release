@@ -1,0 +1,21 @@
+name: 'Retrieve latest Firebase App Release'
+description: 'Github action to retrieves the latest app release from Firebase Distribution'
+inputs:
+  appId:
+    description: 'App ID (https://console.firebase.google.com/project/{PROJECT_NAME}/settings/general)'
+    required: true
+  projectNumber:
+    description: 'Project number (https://console.firebase.google.com/project/{PROJECT_NAME}/settings/general)'
+    required: true
+  serviceAccount:
+    description: 'Service account json string - (https://console.firebase.google.com/project/{YOUR_PROJECT_NAME}/settings/serviceaccounts/adminsdk)'
+    required: true
+outputs:
+  releaseName:
+    description: 'The latest app release name -  Format: projects/{projectNumber}/apps/{appId}/releases/{releaseId}'
+branding:
+  color: 'purple'
+  icon: 'arrow-down'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
